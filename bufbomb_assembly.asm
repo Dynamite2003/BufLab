@@ -349,17 +349,23 @@ Disassembly of section .text:
  8048be0:	55                   	push   %ebp
  8048be1:	89 e5                	mov    %esp,%ebp
  8048be3:	83 ec 28             	sub    $0x28,%esp
+
  8048be6:	e8 38 04 00 00       	call   8049023 <uniqueval>
  8048beb:	89 45 f0             	mov    %eax,-0x10(%ebp)
+
  8048bee:	e8 91 06 00 00       	call   8049284 <getbuf>
  8048bf3:	89 45 f4             	mov    %eax,-0xc(%ebp)
+
  8048bf6:	e8 28 04 00 00       	call   8049023 <uniqueval>
  8048bfb:	8b 55 f0             	mov    -0x10(%ebp),%edx
  8048bfe:	39 d0                	cmp    %edx,%eax
+
  8048c00:	74 0e                	je     8048c10 <test+0x30>
  8048c02:	c7 04 24 50 a6 04 08 	movl   $0x804a650,(%esp)
  8048c09:	e8 f2 fc ff ff       	call   8048900 <puts@plt>
  8048c0e:	eb 42                	jmp    8048c52 <test+0x72>
+
+
  8048c10:	8b 55 f4             	mov    -0xc(%ebp),%edx
  8048c13:	a1 04 e1 04 08       	mov    0x804e104,%eax
  8048c18:	39 c2                	cmp    %eax,%edx
@@ -377,6 +383,8 @@ Disassembly of section .text:
  8048c46:	89 54 24 04          	mov    %edx,0x4(%esp)
  8048c4a:	89 04 24             	mov    %eax,(%esp)
  8048c4d:	e8 de fb ff ff       	call   8048830 <printf@plt>
+
+ 
  8048c52:	c9                   	leave  
  8048c53:	c3                   	ret    
 
